@@ -1,3 +1,8 @@
+# INF601 - Advanced Programming in Python
+# Bunyamin Sari
+# Mini Project 3
+
+
 import sqlite3
 
 import click
