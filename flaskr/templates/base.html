@@ -18,22 +18,17 @@
             <a class="nav-link active" aria-current="page" href="/">Home</a>
           </li>
           {% if g.user %}
-        <div class="d-flex justify-content-end">
           <li class="nav-item">
             <span class="nav-link link-success">{{ g.user['username'] }}</span>
           </li>
           <li class="nav-item">
-          <a class="nav-link btn btn-primary" role="button" href="{{ url_for('auth.logout') }}">Log Out</a>
+          <a class="nav-link btn btn-primary" role="button" href="{{ url_for('auth.logout') }}">Sign Out</a>
           </li>
           {% else %}
-<!--          <li class="nav-item">-->
-<!--            <a class=" nav-link btn btn-outline-info"  href="{{ url_for('auth.register') }}">Register</a>-->
-<!--          </li>-->
           <li class="nav-item">
-            <a class="nav-link btn btn-primary"  href="{{ url_for('auth.login') }}">Log In</a>
+            <a class="nav-link btn btn-primary"  href="{{ url_for('auth.login') }}">Sign In</a>
           </li>
         {% endif %}
-        </div>
       </ul>
     </div>
   </div>
