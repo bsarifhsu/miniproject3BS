@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container my-5">
+  <div class="p-5 text-center bg-body-tertiary rounded-3">
+    <h1 class="text-body-emphasis">Welcome to Comment Corner!</h1>
+    <p class="col-lg-8 mx-auto fs-5 text-muted">
+     Here people share their opinions, ideas and thoughts. View, comment, contribute.
+    </p>
+    <div class="d-inline-flex gap-2 mb-5">
+      <a class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill"  href="{{ url_for('blog.index') }}">
+        See all posts
+      </a>
+      <button class="btn btn-outline-secondary btn-lg px-4 rounded-pill" type="button">
+        Meet with People
+      </button>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
