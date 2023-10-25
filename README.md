@@ -13,5 +13,5 @@ pip install -r requirements.txt
 ## How to run
 In a terminal windows, please type the following:
 ```
-python main.py
+flask --app flaskr run
 ```
