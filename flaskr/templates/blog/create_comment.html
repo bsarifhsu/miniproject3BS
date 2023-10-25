@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1>Create Comment</h1>
-
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
   <form method="post">
     <div class="mb-3">
       <label for="text" class="form-label">Comment Text</label>
@@ -10,9 +11,10 @@
     </div>
     <div class="d-grid">
       <button type="submit" class="btn btn-primary">Submit</button>
+      <a href="{{ url_for('blog.view_post', post_id=post_id) }}" class="btn btn-secondary mt-3">Back to Post</a>
     </div>
   </form>
-
-  <a href="{{ url_for('blog.view_post', post_id=post_id) }}" class="btn btn-secondary mt-3">Back to Post</a>
+    </div>
+  </div>
 </div>
 {% endblock %}
