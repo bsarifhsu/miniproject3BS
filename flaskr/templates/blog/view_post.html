@@ -15,7 +15,7 @@
       </li>
     {% endfor %}
   </ul>
-
+  <a href="{{ url_for('blog.create_comment',post_id=post.id) }}" class="btn btn-secondary mt-3">Comment</a>
   <!-- Add a form to allow users to add new comments -->
   <!-- (Form handling and submission logic is not shown in this template) -->
 </div>

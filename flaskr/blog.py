@@ -132,7 +132,7 @@ def create_comment(post_id):
                 (post_id, g.user['id'], text)
             )
             db.commit()
-            return redirect(url_for('blog.index'))
+            return redirect(url_for('blog.view_post', post_id=post_id))
 
     return render_template('blog/create_comment.html',post_id=post_id)
 
