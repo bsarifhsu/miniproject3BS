@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>{{ post.title }}</h1>
+  <p>By {{ post.username }} on {{ post.created }}</p>
+  <p>{{ post.body }}</p>
+
+  <h2>Comments</h2>
+  <ul>
+    {% for comment in comments %}
+      <li>
+        <p>By {{ comment.username }} on {{ comment.created }}</p>
+        <p>{{ comment.text }}</p>
+        <a href="{{ url_for('blog.update_comment', comment_id= comment.id) }}" class="btn btn-primary">Edit Comment</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <!-- Add a form to allow users to add new comments -->
+  <!-- (Form handling and submission logic is not shown in this template) -->
+</div>
+{% endblock %}

@@ -15,3 +15,13 @@ CREATE TABLE post (
   body TEXT NOT NULL,
   FOREIGN KEY (author_id) REFERENCES user (id)
 );
+
+CREATE TABLE comment (
+    id INTEGER PRIMARY KEY,
+    post_id INTEGER,
+    author_id INTEGER,
+    created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    text TEXT NOT NULL,
+    FOREIGN KEY (post_id) REFERENCES post (id),
+    FOREIGN KEY (author_id) REFERENCES user (id)
+);
